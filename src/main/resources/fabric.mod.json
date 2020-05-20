@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "flight_display",
+  "version": "${version}",
+
+  "name": "Critical Flight Display",
+  "description": "Adds HUD for Elytra Flight",
+  "authors": [
+    "TheCritic"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://fabricmc.net/"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/elytra.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.critical.flight_display.FlightDisplay"
+    ]
+  },
+  "mixins": [
+      "flight_display.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.2",
+    "fabric": "*",
+    "minecraft": "1.15.x"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}
