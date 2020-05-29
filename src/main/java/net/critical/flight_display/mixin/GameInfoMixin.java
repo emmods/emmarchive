@@ -1,10 +1,8 @@
 package net.critical.flight_display.mixin;
 
-import net.critical.flight_display.FlightDisplay;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.critical.flight_display.hud.FlightDisplayHud;
-import net.fabricmc.fabric.api.client.keybinding.FabricKeyBinding;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.hud.InGameHud;
 import org.spongepowered.asm.mixin.Final;
@@ -28,7 +26,6 @@ public abstract class GameInfoMixin {
         // Start Mixin
         System.out.println("Init Coordinates Mixin");
         this.hudInfo = new FlightDisplayHud(client);
-        //keyBinding = MyKeyBind.keyBinding;
 
     }
 
