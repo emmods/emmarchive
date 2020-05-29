@@ -70,11 +70,20 @@ publishing {
 				builtBy remapSourcesJar
 			}
 		}
+		gpr(MavenPublication) {
+			from(components.java)
+		}
 	}
 
 	// select the repositories you want to publish to
 	repositories {
-		// uncomment to publish to the local maven
-		// mavenLocal()
+		maven {
+			name = "GitHubPackages"
+			url = uri("https://maven.pkg.github.com/bshuler/critical-flight-details")
+			credentials {
+				username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+				password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+			}
+		}
 	}
 }

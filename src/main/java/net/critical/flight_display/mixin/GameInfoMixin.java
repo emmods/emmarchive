@@ -35,13 +35,13 @@ public abstract class GameInfoMixin {
     @Inject(method = "render", at = @At(value = "FIELD", target = "Lnet/minecraft/client/options/GameOptions;hudHidden:Z", ordinal = 2))
     private void onDraw(float esp, CallbackInfo ci) {
 
-        if (FlightDisplay.isEnabled()){
-            if (!this.client.options.debugEnabled) {
-                // Draw Game info on every GameHud render
+        MinecraftClient minecraftClient = MinecraftClient.getInstance();
+
+        if (minecraftClient.player != null) {
+            if (minecraftClient.player.isFallFlying()) {
                 this.hudInfo.draw();
             }
         }
-
     }
 
     @Inject(method = "resetDebugHudChunk", at = @At(value = "RETURN"))
