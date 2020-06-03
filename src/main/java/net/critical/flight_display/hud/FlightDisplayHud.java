@@ -56,7 +56,7 @@ public class FlightDisplayHud implements Drawable {
         double pitch_offset = (distance_between_hashes / 10) * (display_pitch % 10);
 
         int lineHeight = this.fontRenderer.fontHeight + 2;
-        this.fontRenderer.draw( String.format("Pitch: %s", (int) this.player.getPitch(0)), (float) left+10, (float) middle_height, Color.RED.getRGB());
+        this.fontRenderer.draw( String.format("Pitch: %s", (int) this.player.getPitch(0)*-1), (float) left+10, (float) middle_height, Color.RED.getRGB());
         this.fontRenderer.draw( String.format("Speed: %s", (int) this.speed ), (float) left+10, (float) bottom, Color.RED.getRGB());
 
         for(double hash_y = top; hash_y <= bottom + distance_between_hashes; hash_y = hash_y + distance_between_hashes) {
