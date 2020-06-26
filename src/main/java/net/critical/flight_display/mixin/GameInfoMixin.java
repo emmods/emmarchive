@@ -30,7 +30,7 @@ public abstract class GameInfoMixin {
     }
 
     @Inject(method = "render", at = @At(value = "FIELD", target = "Lnet/minecraft/client/options/GameOptions;hudHidden:Z", ordinal = 2))
-    private void onDraw(float esp, CallbackInfo ci) {
+    private void onDraw(CallbackInfo ci) {
 
         MinecraftClient minecraftClient = MinecraftClient.getInstance();
 

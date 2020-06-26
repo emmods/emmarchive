@@ -10,6 +10,7 @@ import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.BufferBuilder;
 import net.minecraft.client.render.Tessellator;
 import net.minecraft.client.render.VertexFormats;
+import net.minecraft.client.util.math.MatrixStack;
 import org.lwjgl.opengl.GL11;
 
 import java.awt.Color;
@@ -56,8 +57,9 @@ public class FlightDisplayHud implements Drawable {
         double pitch_offset = (distance_between_hashes / 10) * (display_pitch % 10);
 
         int lineHeight = this.fontRenderer.fontHeight + 2;
-        this.fontRenderer.draw( String.format("Pitch: %s", (int) this.player.getPitch(0)*-1), (float) left+10, (float) middle_height, Color.RED.getRGB());
-        this.fontRenderer.draw( String.format("Speed: %s", (int) this.speed ), (float) left+10, (float) bottom, Color.RED.getRGB());
+        MatrixStack matrixStack = new MatrixStack();
+        this.fontRenderer.draw(matrixStack, String.format("Pitch: %s", (int) this.player.getPitch(0)*-1), (float) left+10, (float) middle_height, Color.RED.getRGB());
+        this.fontRenderer.draw(matrixStack, String.format("Speed: %s", (int) this.speed ), (float) left+10, (float) bottom, Color.RED.getRGB());
 
         for(double hash_y = top; hash_y <= bottom + distance_between_hashes; hash_y = hash_y + distance_between_hashes) {
             double hash_y_offset = hash_y + pitch_offset;
@@ -98,6 +100,6 @@ public class FlightDisplayHud implements Drawable {
     }
 
     @Override
-    public void render(int mouseX, int mouseY, float delta) {
+    public void render(MatrixStack matrixstack, int mouseX, int mouseY, float delta) {
     }
 }
