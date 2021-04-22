@@ -1,37 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "pridequilts",
   "version": "${version}",
-
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Pride Quilts",
+  "description": "A (ironically, Fabric) mod to add some pride quilts! (quilts not included)",
   "authors": [
-    "Me!"
+    "wafflecoffee"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
     "sources": "https://github.com/FabricMC/fabric-example-mod"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
-
+  "license": "BSL-1.0",
+  "icon": "assets/pridequilts/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "coffee.waffle.pridequilts.PrideQuilts"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "pridequilts.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.7.4",
-    "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "fabric": "*"
   }
 }
