@@ -1,27 +1,25 @@
 {
   "schemaVersion": 1,
-  "id": "pridequilts",
+  "id": "prideflags",
   "version": "${version}",
-  "name": "Pride Quilts",
-  "description": "A (ironically, Fabric) mod to add some pride quilts! (quilts not included)",
+  "name": "Pride Flags",
+  "description": "A mod to add some pride flags! Still very much in development. so pardon the mess.",
   "authors": [
-    "wafflecoffee"
+    "Emmaffle"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "https://github.com/wafflecoffee/prideflags-mod",
+    "sources": "https://github.com/wafflecoffee/prideflags-mod",
+    "issues": "https://github.com/wafflecoffee/prideflags-mod/issues"
   },
   "license": "BSL-1.0",
-  "icon": "assets/pridequilts/icon.png",
+  "icon": "assets/prideflags/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "coffee.waffle.pridequilts.PrideQuilts"
+      "coffee.waffle.prideflags.PrideFlags"
     ]
   },
-  "mixins": [
-    "pridequilts.mixins.json"
-  ],
   "depends": {
     "fabric": "*"
   }
