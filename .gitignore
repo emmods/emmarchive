@@ -9,6 +9,7 @@ classes/
 
 # IDEA
 .idea/
+remappedSrc/
 *.iml
 *.ipr
 *.iws
@@ -24,6 +25,7 @@ bin/
 *.DS_Store
 
 # Fabric
+run/.fabric
 run/.mixin.out
 run/config
 run/crash-reports

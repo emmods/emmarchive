@@ -6,6 +6,7 @@ package coffee.waffle.prideflags;
 */
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
@@ -20,18 +21,22 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class PrideFlags implements ModInitializer {
-    public static final Item RAINBOW_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item TRANS_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item NONBINARY_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item GENDERFLUID_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item BI_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item LESBIAN_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item ACE_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item ARO_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item PAN_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item POLY_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item AGENDER_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
-    public static final Item MLM_FLAG = new Item(new FabricItemSettings().group(ItemGroup.MISC));
+    public static final Item RAINBOW_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item TRANS_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item NONBINARY_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item GENDERFLUID_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item BI_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item LESBIAN_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item ACE_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item ARO_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item PAN_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item POLY_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item AGENDER_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+    public static final Item MLM_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
+
+    public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.build(
+            new Identifier("prideflags", "flags"),
+            () -> new ItemStack(PrideFlags.RAINBOW_FLAG));
 
     @Override
     public void onInitialize() {
@@ -50,6 +55,7 @@ public class PrideFlags implements ModInitializer {
     }
 
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
+        tooltip.add(new TranslatableText("itemgroup.prideflags.pride_group"));
         tooltip.add(new TranslatableText("item.prideflags.rainbow_flag"));
         tooltip.add(new TranslatableText("item.prideflags.trans_flag"));
         tooltip.add(new TranslatableText("item.prideflags.nonbinary_flag"));
