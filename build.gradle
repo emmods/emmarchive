@@ -1,7 +1,4 @@
-plugins {
-    id "fabric-loom" version "0.7-SNAPSHOT"
-    id "com.modrinth.minotaur" version "1.2.0"
-}
+plugins { id "fabric-loom" version "0.7-SNAPSHOT" }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -33,17 +30,4 @@ jar {
     from("LICENSE") {
         rename { "${it}_${project.archivesBaseName}" }
     }
-}
-
-import com.modrinth.minotaur.TaskModrinthUpload
-
-task publishModrinth(type: TaskModrinthUpload) {
-    onlyIf { System.getenv("MODRINTH_TOKEN") }
-    token = System.getenv("MODRINTH_TOKEN")
-    projectId = 'hd1Vej58'
-    versionNumber = project.mod_version
-    uploadFile = jar.outputs.getFiles().asPath
-    addGameVersion('1.16.5')
-    addLoader('fabric')
-    // addDependency('zd2RW4Xi', 'required')
 }
