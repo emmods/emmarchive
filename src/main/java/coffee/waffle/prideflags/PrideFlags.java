@@ -21,6 +21,14 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class PrideFlags implements ModInitializer {
+    public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.create(
+            new Identifier("prideflags", "flags"))
+            .icon(() -> new ItemStack(PrideFlags.RAINBOW_FLAG))
+            .appendItems(stacks -> {
+                stacks.add(new ItemStack(PrideFlags.RAINBOW_FLAG));
+            })
+            .build();
+
     public static final Item RAINBOW_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item TRANS_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item NONBINARY_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
@@ -33,10 +41,6 @@ public class PrideFlags implements ModInitializer {
     public static final Item POLY_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item AGENDER_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item MLM_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
-
-    public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.build(
-            new Identifier("prideflags", "flags"),
-            () -> new ItemStack(PrideFlags.RAINBOW_FLAG));
 
     @Override
     public void onInitialize() {
@@ -55,7 +59,7 @@ public class PrideFlags implements ModInitializer {
     }
 
     public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("itemgroup.prideflags.pride_group"));
+        tooltip.add(new TranslatableText("itemGroup.prideflags.flags"));
         tooltip.add(new TranslatableText("item.prideflags.rainbow_flag"));
         tooltip.add(new TranslatableText("item.prideflags.trans_flag"));
         tooltip.add(new TranslatableText("item.prideflags.nonbinary_flag"));

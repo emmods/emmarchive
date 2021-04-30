@@ -1,7 +1,7 @@
 # Pride Flags
 
 ![Fabric API required](https://i.imgur.com/HabVZJRm.png)
-![No Forge](https://i.imgur.com/77kxz8xm.png)
+![No Forge](https://i.imgur.com/77kxz8xm.png)  
 ![Modrinth Downloads](https://waffle.coffee/modrinth/prideflags/downloads?style=flat-square)
 
 A mod to add some pride flags, cause such a mod didn't already exist apparently! Still very much in development. so pardon the mess. 
