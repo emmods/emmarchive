@@ -1,5 +1,7 @@
 # Pride Flags
 
+![Modrinth Downloads](https://waffle.coffee/modrinth/prideflags/downloads?style=flat-square)
+
 Barely actually does anything :P My first solo Fabric mod... so nothing will probably work :D
 
 Copyright Emmaffle <pridequilts@waffle.coffee> 2021. Distributed under the Boost Software License, Version 1.0 ("BSL-1.0").  

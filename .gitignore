@@ -24,4 +24,11 @@ bin/
 *.DS_Store
 
 # Fabric
-run/
+run/.mixin.out
+run/config
+run/crash-reports
+run/logs
+run/mods
+run/resourcepacks
+run/saves
+run/usercache.json
