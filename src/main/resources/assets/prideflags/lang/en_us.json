@@ -1,5 +1,6 @@
 {
   "itemGroup.prideflags.flags": "Pride Items",
+
   "item.prideflags.rainbow_flag": "Rainbow Flag",
   "item.prideflags.trans_flag": "Trans Flag",
   "item.prideflags.nonbinary_flag": "Nonbinary Flag",
@@ -11,5 +12,18 @@
   "item.prideflags.pan_flag": "Pan Flag",
   "item.prideflags.poly_flag": "Poly Flag",
   "item.prideflags.agender_flag": "Agender Flag",
-  "item.prideflags.mlm_flag": "MLM Flag"
+  "item.prideflags.mlm_flag": "MLM Flag",
+
+  "block.prideflags.rainbow_block": "Rainbow Block",
+  "block.prideflags.trans_block": "Trans Block",
+  "block.prideflags.nonbinary_block": "Nonbinary Block",
+  "block.prideflags.genderfluid_block": "Genderfluid Block",
+  "block.prideflags.bi_block": "Bi Block",
+  "block.prideflags.lesbian_block": "Lesbian Block",
+  "block.prideflags.ace_block": "Asexual Block",
+  "block.prideflags.aro_block": "Aromantic Block",
+  "block.prideflags.pan_block": "Pan Block",
+  "block.prideflags.poly_block": "Poly Block",
+  "block.prideflags.agender_block": "Agender Block",
+  "block.prideflags.mlm_block": "MLM Block"
 }
