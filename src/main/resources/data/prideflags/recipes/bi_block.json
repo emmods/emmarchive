@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:bi_flag"
+    },
+    {
+      "item": "prideflags:bi_flag"
+    },
+    {
+      "item": "prideflags:bi_flag"
+    },
+    {
+      "item": "prideflags:bi_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:bi_block"
+  }
+}

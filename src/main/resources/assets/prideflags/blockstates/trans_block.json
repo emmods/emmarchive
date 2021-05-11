@@ -1,3 +1,7 @@
 {
-  "variants": { "": { "model": "prideflags:block/trans_block" } }
+  "variants": {
+    "": {
+      "model": "prideflags:block/trans_block"
+    }
+  }
 }

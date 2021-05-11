@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:aro_flag"
+    },
+    {
+      "item": "prideflags:aro_flag"
+    },
+    {
+      "item": "prideflags:aro_flag"
+    },
+    {
+      "item": "prideflags:aro_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:aro_block"
+  }
+}

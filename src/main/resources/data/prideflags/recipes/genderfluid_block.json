@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:genderfluid_flag"
+    },
+    {
+      "item": "prideflags:genderfluid_flag"
+    },
+    {
+      "item": "prideflags:genderfluid_flag"
+    },
+    {
+      "item": "prideflags:genderfluid_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:genderfluid_block"
+  }
+}

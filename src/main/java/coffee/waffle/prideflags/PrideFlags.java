@@ -12,20 +12,23 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.world.World;
+
 import java.util.List;
 
 public class PrideFlags implements ModInitializer {
+    public static final Item RAINBOW_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.build(
             new Identifier("prideflags", "flags"),
             () -> new ItemStack(PrideFlags.RAINBOW_FLAG));
-
-    public static final Item RAINBOW_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item TRANS_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item NONBINARY_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));
     public static final Item GENDERFLUID_FLAG = new Item(new FabricItemSettings().group(PrideFlags.PRIDE_GROUP));

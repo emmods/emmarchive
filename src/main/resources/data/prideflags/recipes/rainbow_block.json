@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:rainbow_flag"
+    },
+    {
+      "item": "prideflags:rainbow_flag"
+    },
+    {
+      "item": "prideflags:rainbow_flag"
+    },
+    {
+      "item": "prideflags:rainbow_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:rainbow_block"
+  }
+}

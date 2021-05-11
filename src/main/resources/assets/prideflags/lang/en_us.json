@@ -1,6 +1,5 @@
 {
   "itemGroup.prideflags.flags": "Pride Items",
-
   "item.prideflags.rainbow_flag": "Rainbow Flag",
   "item.prideflags.trans_flag": "Trans Flag",
   "item.prideflags.nonbinary_flag": "Nonbinary Flag",
@@ -13,7 +12,6 @@
   "item.prideflags.poly_flag": "Poly Flag",
   "item.prideflags.agender_flag": "Agender Flag",
   "item.prideflags.mlm_flag": "MLM Flag",
-
   "block.prideflags.rainbow_block": "Rainbow Block",
   "block.prideflags.trans_block": "Trans Block",
   "block.prideflags.nonbinary_block": "Nonbinary Block",

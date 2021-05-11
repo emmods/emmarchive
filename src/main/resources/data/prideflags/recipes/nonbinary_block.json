@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:nonbinary_flag"
+    },
+    {
+      "item": "prideflags:nonbinary_flag"
+    },
+    {
+      "item": "prideflags:nonbinary_flag"
+    },
+    {
+      "item": "prideflags:nonbinary_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:nonbinary_block"
+  }
+}

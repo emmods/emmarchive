@@ -4,7 +4,9 @@
   "version": "${version}",
   "name": "Pride Flags",
   "description": "A mod to add some pride flags, cause such a mod didn't already exist apparently! Still very much in development. so pardon the mess.",
-  "authors": [ "Emmaffle" ],
+  "authors": [
+    "Emmaffle"
+  ],
   "contact": {
     "homepage": "https://github.com/wafflecoffee/prideflags",
     "sources": "https://github.com/wafflecoffee/prideflags",
@@ -14,7 +16,9 @@
   "icon": "assets/prideflags/icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [ "coffee.waffle.prideflags.PrideFlags" ]
+    "main": [
+      "coffee.waffle.prideflags.PrideFlags"
+    ]
   },
   "depends": {
     "fabric": "*"

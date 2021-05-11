@@ -1,3 +1,7 @@
 {
-  "variants": { "": { "model": "prideflags:block/poly_block" } }
+  "variants": {
+    "": {
+      "model": "prideflags:block/poly_block"
+    }
+  }
 }

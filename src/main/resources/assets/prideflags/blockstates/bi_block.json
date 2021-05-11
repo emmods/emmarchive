@@ -1,3 +1,7 @@
 {
-  "variants": { "": { "model": "prideflags:block/bi_block" } }
+  "variants": {
+    "": {
+      "model": "prideflags:block/bi_block"
+    }
+  }
 }

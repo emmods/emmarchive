@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "prideflags:trans_flag"
+    },
+    {
+      "item": "prideflags:trans_flag"
+    },
+    {
+      "item": "prideflags:trans_flag"
+    },
+    {
+      "item": "prideflags:trans_flag"
+    }
+  ],
+  "result": {
+    "item": "prideflags:trans_block"
+  }
+}
