@@ -1,0 +1,36 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+
+# Eclipse
+*.launch
+
+# IDEA
+.idea/
+remappedSrc/
+*.iml
+*.ipr
+*.iws
+
+# Code
+.settings/
+.vscode/
+bin/
+.classpath
+.project
+
+# macOS
+*.DS_Store
+
+# Fabric
+run/.fabric
+run/.mixin.out
+run/config
+run/crash-reports
+run/logs
+run/mods
+run/resourcepacks
+run/saves
+run/usercache.json

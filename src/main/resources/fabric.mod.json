@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "chocobacon",
+  "version": "${version}",
+  "name": "Chocobacon",
+  "description": "Chocolate & bacon. What else do you need?",
+  "authors": [
+    "Emmaffle"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/chocobacon",
+    "sources": "https://github.com/wafflecoffee/prideflags",
+    "issues": "https://github.com/wafflecoffee/prideflags/issues"
+  },
+  "license": "BSL-1.0",
+  "icon": "assets/chocobacon/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "coffee.waffle.chocobacon.Chocobacon"
+    ]
+  },
+  "depends": {
+    "fabric": "*"
+  }
+}
