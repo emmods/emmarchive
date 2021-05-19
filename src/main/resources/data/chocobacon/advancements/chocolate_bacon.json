@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "chocobacon:chocolate_bacon"
+    },
+    "title": {
+      "translate": "advancements.chocobacon.chocolate_bacon"
+    },
+    "description": {
+      "translate": "advancements.chocobacon.chocolate_bacon.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "chocobacon_obtained": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "chocobacon:chocolate_bacon"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "chocobacon_obtained"
+    ]
+  ]
+}

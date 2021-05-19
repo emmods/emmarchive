@@ -10,13 +10,20 @@
 
 - Chocolate Bacon
   - Makes you fat for a sec but otherwise is very nutritious
-  - Crafted via chocolate bar + cooked bacon
+  - Crafted via Chocolate Bar + Cooked Bacon
+  - Gives an advancement
 - Cooked Bacon
   - A tad better than cooked porkchops
-  - Obtained via smelting cooked porkchops
+  - Obtained via smelting cooked porkchops, or mining Bacon Ore
 - Chocolate Bar
   - It isn't that nutritious but what can ye do
-  - Obtained via cocoa beans + sugar
+  - Obtained via cocoa beans + sugar, or mining Chocolate Ore
+- Chocolate Ore
+  - Drops Chocolate Bars
+  - Can be found in the Overworld
+- Bacon Ore
+  - Drops Cooked Bacon
+  - Can be found in the Nether
 
 # License
 
