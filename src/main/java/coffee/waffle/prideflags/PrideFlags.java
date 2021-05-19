@@ -95,34 +95,4 @@ public class PrideFlags implements ModInitializer {
         Registry.register(Registry.ITEM, new Identifier("prideflags", "agender_block"), new BlockItem(AGENDER_BLOCK, new FabricItemSettings().group(PrideFlags.PRIDE_GROUP)));
         Registry.register(Registry.ITEM, new Identifier("prideflags", "mlm_block"), new BlockItem(MLM_BLOCK, new FabricItemSettings().group(PrideFlags.PRIDE_GROUP)));
     }
-
-    public void appendTooltip(ItemStack itemStack, World world, List<Text> tooltip, TooltipContext tooltipContext) {
-        tooltip.add(new TranslatableText("itemGroup.prideflags.flags"));
-
-        tooltip.add(new TranslatableText("item.prideflags.rainbow_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.trans_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.nonbinary_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.genderfluid_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.bi_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.lesbian_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.ace_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.aro_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.pan_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.poly_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.agender_flag"));
-        tooltip.add(new TranslatableText("item.prideflags.mlm_flag"));
-
-        tooltip.add(new TranslatableText("item.prideflags.rainbow_block"));
-        tooltip.add(new TranslatableText("item.prideflags.trans_block"));
-        tooltip.add(new TranslatableText("item.prideflags.nonbinary_block"));
-        tooltip.add(new TranslatableText("item.prideflags.genderfluid_block"));
-        tooltip.add(new TranslatableText("item.prideflags.bi_block"));
-        tooltip.add(new TranslatableText("item.prideflags.lesbian_block"));
-        tooltip.add(new TranslatableText("item.prideflags.ace_block"));
-        tooltip.add(new TranslatableText("item.prideflags.aro_block"));
-        tooltip.add(new TranslatableText("item.prideflags.pan_block"));
-        tooltip.add(new TranslatableText("item.prideflags.poly_block"));
-        tooltip.add(new TranslatableText("item.prideflags.agender_block"));
-        tooltip.add(new TranslatableText("item.prideflags.mlm_block"));
-    }
 }
