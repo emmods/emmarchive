@@ -35,19 +35,16 @@ public class RegisterItems {
   // Declaring blocks
   public static final Block CHOCOLATE_ORE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F));
   public static final Block BACON_ORE = new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F));
-
+  // Declaring Chocolate Armour items
+  public static final ArmorMaterial chocolateBarMaterial = new ChocolateBarMaterial();
+  public static final Item CHOCOLATE_HELMET = new ArmorItem(chocolateBarMaterial, EquipmentSlot.HEAD, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
+  public static final Item CHOCOLATE_CHESTPLATE = new ArmorItem(chocolateBarMaterial, EquipmentSlot.CHEST, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
+  public static final Item CHOCOLATE_LEGGINGS = new ArmorItem(chocolateBarMaterial, EquipmentSlot.LEGS, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
+  public static final Item CHOCOLATE_BOOTS = new ArmorItem(chocolateBarMaterial, EquipmentSlot.FEET, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
   // Declaring Chocolate Ore veins (overworld)
   private static final ConfiguredFeature<?, ?> CHOCOLATE_ORE_OVERWORLD = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CHOCOLATE_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7);
-
   // Declaring Bacon Ore veins (nether)
   private static final ConfiguredFeature<?, ?> BACON_ORE_NETHER = Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_NETHER, BACON_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7);
-
-  // Declaring Chocolate Armour items
-  public static final ArmorMaterial chocolateMaterial = new ChocolateMaterial();
-  public static final Item CHOCOLATE_HELMET = new ArmorItem(chocolateMaterial, EquipmentSlot.HEAD, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
-  public static final Item CHOCOLATE_CHESTPLATE = new ArmorItem(chocolateMaterial, EquipmentSlot.CHEST, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
-  public static final Item CHOCOLATE_LEGGINGS = new ArmorItem(chocolateMaterial, EquipmentSlot.LEGS, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
-  public static final Item CHOCOLATE_BOOTS = new ArmorItem(chocolateMaterial, EquipmentSlot.FEET, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP));
 
   public static void register() {
     // Registering items
