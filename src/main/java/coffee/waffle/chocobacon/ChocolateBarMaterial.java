@@ -37,7 +37,7 @@ public class ChocolateBarMaterial implements ArmorMaterial {
 
   @Override
   public Ingredient getRepairIngredient() {
-    return Ingredient.ofItems(RegisterItems.CHOCOLATE_BAR);
+    return Ingredient.ofItems(ChocobaconRegistry.CHOCOLATE_BAR);
   }
 
   @Override

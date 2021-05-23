@@ -27,13 +27,12 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
-public class RegisterItems {
+public class ChocobaconRegistry {
   public static final String MODID = "chocobacon";
   public static final ArmorMaterial chocolateBarMaterial = new ChocolateBarMaterial();
-  public static Item COOKED_BACON, CHOCOLATE_BAR, CHOCOLATE_BACON, CHOCOLATE_HELMET, CHOCOLATE_CHESTPLATE, CHOCOLATE_LEGGINGS, CHOCOLATE_BOOTS, CHOCOLATE_BUCKET;
+  public static Item COOKED_BACON, CHOCOLATE_BAR, CHOCOLATE_BACON, CHOCOLATE_BUCKET;
   public static Block CHOCOLATE_ORE, BACON_ORE;
   public static FlowableFluid STILL_CHOCOLATE, FLOWING_CHOCOLATE;
-  private static ConfiguredFeature<?, ?> CHOCOLATE_ORE_OVERWORLD, BACON_ORE_NETHER;
 
   public static void register() {
     // Registering items

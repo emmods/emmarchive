@@ -72,7 +72,7 @@ public class ChocobaconClient implements ClientModInitializer {
 
   @Override
   public void onInitializeClient() {
-    setupFluidRendering(RegisterItems.STILL_CHOCOLATE, RegisterItems.FLOWING_CHOCOLATE, new Identifier(MODID, "chocolate_fluid"), 0x7B3F00);
-    BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), RegisterItems.STILL_CHOCOLATE, RegisterItems.FLOWING_CHOCOLATE);
+    setupFluidRendering(ChocobaconRegistry.STILL_CHOCOLATE, ChocobaconRegistry.FLOWING_CHOCOLATE, new Identifier(MODID, "chocolate_fluid"), 0x7B3F00);
+    BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), ChocobaconRegistry.STILL_CHOCOLATE, ChocobaconRegistry.FLOWING_CHOCOLATE);
   }
 }

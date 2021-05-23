@@ -18,19 +18,19 @@ import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static coffee.waffle.chocobacon.RegisterItems.STILL_CHOCOLATE;
+import static coffee.waffle.chocobacon.ChocobaconRegistry.STILL_CHOCOLATE;
 
 public class Chocobacon implements ModInitializer {
   public static final String MODID = "chocobacon";
   public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier("chocobacon", "chocobacon_group")).icon(() -> new ItemStack(RegisterItems.CHOCOLATE_BACON)).build();
+  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier("chocobacon", "chocobacon_group")).icon(() -> new ItemStack(ChocobaconRegistry.CHOCOLATE_BACON)).build();
 
   public static Block CHOCOLATE_FLUID;
 
   @Override
   public void onInitialize() {
-    RegisterItems.register();
+    ChocobaconRegistry.register();
     CHOCOLATE_FLUID = Registry.register(Registry.BLOCK, new Identifier(MODID, "chocolate"), new FluidBlock(STILL_CHOCOLATE, FabricBlockSettings.copy(Blocks.WATER)) {
     });
 

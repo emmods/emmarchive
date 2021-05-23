@@ -13,7 +13,7 @@ import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 
 import static coffee.waffle.chocobacon.Chocobacon.CHOCOLATE_FLUID;
-import static coffee.waffle.chocobacon.RegisterItems.*;
+import static coffee.waffle.chocobacon.ChocobaconRegistry.*;
 
 public abstract class ChocolateFluid extends Fluids {
   @Override
