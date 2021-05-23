@@ -17,13 +17,11 @@ public class PrideFlags implements ModInitializer {
   public static final String MODID = "prideflags";
   public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-  public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.build(new Identifier("prideflags", "flags"), () -> new ItemStack(Register.RAINBOW_FLAG));
+  public static final ItemGroup PRIDE_GROUP = FabricItemGroupBuilder.build(new Identifier("prideflags", "flags"), () -> new ItemStack(PrideFlagsRegistry.RAINBOW_FLAG));
 
   @Override
   public void onInitialize() {
-    Register.registerFlagItems();
-    Register.registerPrideBlocks();
-    Register.registerPrideBlockitems();
+    PrideFlagsRegistry.register();
 
     LOGGER.info("Pride Flags has finished loading! \uD83C\uDFF3️\u200D\uD83C\uDF08");
   }
