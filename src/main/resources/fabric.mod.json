@@ -18,6 +18,9 @@
   "entrypoints": {
     "main": [
       "coffee.waffle.chocobacon.Chocobacon"
+    ],
+    "client": [
+      "coffee.waffle.chocobacon.ChocobaconClient"
     ]
   },
   "depends": {
