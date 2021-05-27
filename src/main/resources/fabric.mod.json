@@ -9,8 +9,8 @@
   ],
   "contact": {
     "homepage": "https://modrinth.com/mod/chocobacon",
-    "sources": "https://github.com/wafflecoffee/prideflags",
-    "issues": "https://github.com/wafflecoffee/prideflags/issues"
+    "sources": "https://github.com/wafflecoffee/chocobacon",
+    "issues": "https://github.com/wafflecoffee/chocobacon/issues"
   },
   "license": "BSL-1.0",
   "icon": "assets/chocobacon/icon.png",
