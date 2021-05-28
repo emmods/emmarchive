@@ -1,11 +1,11 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:cocoa_beans"
+      "item": "cocoa_beans"
     },
     {
-      "item": "minecraft:sugar"
+      "item": "sugar"
     }
   ],
   "result": {

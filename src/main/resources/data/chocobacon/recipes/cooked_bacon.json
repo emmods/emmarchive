@@ -1,7 +1,7 @@
 {
-  "type": "minecraft:smelting",
+  "type": "smelting",
   "ingredient": {
-    "item": "minecraft:cooked_porkchop"
+    "item": "cooked_porkchop"
   },
   "result": "chocobacon:cooked_bacon",
   "experience": 0.15,
