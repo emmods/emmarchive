@@ -24,7 +24,6 @@ public class Chocobacon implements ModInitializer {
   public static final String MODID = "chocobacon";
   public static final Logger LOGGER = LogManager.getLogger(MODID);
 
-  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier("chocobacon", "chocobacon_group")).icon(() -> new ItemStack(ChocobaconRegistry.CHOCOLATE_BACON)).build();
 
   public static Block CHOCOLATE_FLUID;
 

@@ -7,6 +7,7 @@ package coffee.waffle.chocobacon;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -30,24 +31,27 @@ import net.minecraft.world.gen.feature.OreFeatureConfig;
 public class ChocobaconRegistry {
   public static final String MODID = "chocobacon";
 
+  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier(MODID, "chocobacon_group")).icon(() -> new ItemStack(ChocobaconRegistry.CHOCOLATE_BACON)).build();
+
   public static final ArmorMaterial chocolateBarMaterial = new ChocolateBarMaterial();
   public static Item COOKED_BACON, CHOCOLATE_BAR, CHOCOLATE_BACON, CHOCOLATE_HELMET, CHOCOLATE_CHESTPLATE, CHOCOLATE_LEGGINGS, CHOCOLATE_BOOTS, CHOCOLATE_BUCKET;
   public static Block CHOCOLATE_ORE, BACON_ORE;
   public static FlowableFluid STILL_CHOCOLATE, FLOWING_CHOCOLATE;
 
   public static void register() {
-    COOKED_BACON = Registry.register(Registry.ITEM, new Identifier(MODID, "cooked_bacon"), new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.85F).meat().build())));
-    CHOCOLATE_BAR = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bar"), new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.85F).build())));
-    CHOCOLATE_BACON = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bacon"), new Item(new FabricItemSettings().group(ItemGroup.FOOD).food(new FoodComponent.Builder().hunger(12).saturationModifier(1.3F).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 5), 1F).build())));
+    COOKED_BACON = Registry.register(Registry.ITEM, new Identifier(MODID, "cooked_bacon"), new Item(new FabricItemSettings().group(CHOCOBACON_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.85F).meat().build())));
+    CHOCOLATE_BAR = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bar"), new Item(new FabricItemSettings().group(CHOCOBACON_GROUP).food(new FoodComponent.Builder().hunger(4).saturationModifier(0.85F).build())));
+    CHOCOLATE_BACON = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bacon"), new Item(new FabricItemSettings().group(CHOCOBACON_GROUP).food(new FoodComponent.Builder().hunger(12).saturationModifier(1.3F).statusEffect(new StatusEffectInstance(StatusEffects.SLOWNESS, 20 * 5), 1F).build())));
+
     CHOCOLATE_ORE = Registry.register(Registry.BLOCK, new Identifier(MODID, "chocolate_ore"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
     BACON_ORE = Registry.register(Registry.BLOCK, new Identifier(MODID, "bacon_ore"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
 
-    Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_ore"), new BlockItem(CHOCOLATE_ORE, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
-    Registry.register(Registry.ITEM, new Identifier(MODID, "bacon_ore"), new BlockItem(BACON_ORE, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
+    Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_ore"), new BlockItem(CHOCOLATE_ORE, new FabricItemSettings().group(CHOCOBACON_GROUP)));
+    Registry.register(Registry.ITEM, new Identifier(MODID, "bacon_ore"), new BlockItem(BACON_ORE, new FabricItemSettings().group(CHOCOBACON_GROUP)));
 
     RegistryKey<ConfiguredFeature<?, ?>> chocolateOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
             new Identifier(MODID, "chocolate_ore_overworld"));
-    ConfiguredFeature<?, ?> CHOCOLATE_ORE_OVERWORLD = Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, chocolateOreOverworld.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CHOCOLATE_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7));
+    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, chocolateOreOverworld.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CHOCOLATE_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7));
     BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, chocolateOreOverworld);
 
     RegistryKey<ConfiguredFeature<?, ?>> baconOreNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
@@ -55,13 +59,13 @@ public class ChocobaconRegistry {
     Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, baconOreNether.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_NETHER, BACON_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7));
     BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, baconOreNether);
 
-    CHOCOLATE_HELMET = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_helmet"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.HEAD, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
-    CHOCOLATE_CHESTPLATE = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_chestplate"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.CHEST, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
-    CHOCOLATE_LEGGINGS = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_leggings"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.LEGS, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
-    CHOCOLATE_BOOTS = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_boots"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.FEET, new FabricItemSettings().group(Chocobacon.CHOCOBACON_GROUP)));
+    CHOCOLATE_HELMET = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_helmet"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.HEAD, new FabricItemSettings().group(CHOCOBACON_GROUP)));
+    CHOCOLATE_CHESTPLATE = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_chestplate"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.CHEST, new FabricItemSettings().group(CHOCOBACON_GROUP)));
+    CHOCOLATE_LEGGINGS = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_leggings"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.LEGS, new FabricItemSettings().group(CHOCOBACON_GROUP)));
+    CHOCOLATE_BOOTS = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_boots"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.FEET, new FabricItemSettings().group(CHOCOBACON_GROUP)));
 
     STILL_CHOCOLATE = Registry.register(Registry.FLUID, new Identifier(MODID, "still_chocolate"), new ChocolateFluid.Still());
     FLOWING_CHOCOLATE = Registry.register(Registry.FLUID, new Identifier(MODID, "flowing_chocolate"), new ChocolateFluid.Flowing());
-    CHOCOLATE_BUCKET = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bucket"), new BucketItem(STILL_CHOCOLATE, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).group(Chocobacon.CHOCOBACON_GROUP)));
+    CHOCOLATE_BUCKET = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_bucket"), new BucketItem(STILL_CHOCOLATE, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1).group(CHOCOBACON_GROUP)));
   }
 }
