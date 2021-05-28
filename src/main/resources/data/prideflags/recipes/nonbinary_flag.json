@@ -1,17 +1,17 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:yellow_wool"
+      "item": "yellow_wool"
     },
     {
-      "item": "minecraft:white_wool"
+      "item": "white_wool"
     },
     {
-      "item": "minecraft:purple_wool"
+      "item": "purple_wool"
     },
     {
-      "item": "minecraft:black_wool"
+      "item": "black_wool"
     }
   ],
   "result": {
