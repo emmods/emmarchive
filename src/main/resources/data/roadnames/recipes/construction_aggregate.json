@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sand"
+    },
+    {
+      "item": "gravel"
+    },
+    {
+      "item": "cobblestone"
+    }
+  ],
+  "result": {
+    "item": "roadblocks:construction_aggregate",
+    "count": 16
+  }
+}

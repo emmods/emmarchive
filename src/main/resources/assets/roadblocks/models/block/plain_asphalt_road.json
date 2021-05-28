@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "roadblocks:base/asphalt",
+    "top": "roadblocks:base/asphalt",
+    "side": "roadblocks:base/asphalt"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "roadblocks:construction_aggregate"
+    },
+    {
+      "item": "roadblocks:cement"
+    },
+    {
+      "item": "roadblocks:asphalt"
+    }
+  ],
+  "result": {
+    "item": "roadblocks:plain_asphalt_road",
+    "count": 1
+  }
+}

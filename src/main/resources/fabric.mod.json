@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "roadblocks",
+  "version": "${version}",
+  "name": "Roadblocks",
+  "description": "A mod that adds blocks related to roads.",
+  "authors": [
+    "Emmaffle"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/roadblocks",
+    "sources": "https://github.com/wafflecoffee/roadblocks",
+    "issues": "https://github.com/wafflecoffee/roadblocks/issues"
+  },
+  "license": "MPL-2.0-no-copyleft-exception",
+  "icon": "assets/roadblocks/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "coffee.waffle.roadblocks.Roadblocks"
+    ]
+  },
+  "depends": {
+    "fabric": "*"
+  }
+}
