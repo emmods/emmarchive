@@ -5,16 +5,12 @@
 
 package coffee.waffle.chocobacon;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 
 public abstract class Fluids extends FlowableFluid {
@@ -26,12 +22,6 @@ public abstract class Fluids extends FlowableFluid {
   @Override
   protected boolean isInfinite() {
     return false;
-  }
-
-  @Override
-  protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
-    final BlockEntity blockEntity = state.getBlock().hasBlockEntity() ? world.getBlockEntity(pos) : null;
-    Block.dropStacks(state, world, pos, blockEntity);
   }
 
   @Override

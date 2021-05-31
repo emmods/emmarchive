@@ -2,8 +2,14 @@
   "item.chocobacon.cooked_bacon": "Cooked Bacon",
   "item.chocobacon.chocolate_bar": "Chocolate Bar",
   "item.chocobacon.chocolate_bacon": "Chocolate Bacon",
+  "item.chocobacon.chocolate_helmet": "Chocolate Helmet",
+  "item.chocobacon.chocolate_chestplate": "Chocolate Chestplate",
+  "item.chocobacon.chocolate_leggings": "Chocolate Leggings",
+  "item.chocobacon.chocolate_boots": "Chocolate Boots",
+  "item.chocobacon.chocolate_bucket": "Chocolate Bucket",
   "block.chocobacon.chocolate_ore": "Chocolate Ore",
   "block.chocobacon.bacon_ore": "Bacon Ore",
   "advancements.chocobacon.chocolate_bacon": "Chocolate Bacon obtained!",
-  "advancements.chocobacon.chocolate_bacon.desc": "Hope you don't get too fat trying to eat it..."
+  "advancements.chocobacon.chocolate_bacon.desc": "Hope you don't get too fat trying to eat it...",
+  "itemGroup.chocobacon.chocobacon_group": "Chocobacon"
 }

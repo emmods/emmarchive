@@ -22,21 +22,23 @@ import net.minecraft.util.registry.BuiltinRegistries;
 import net.minecraft.util.registry.Registry;
 import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
+import net.minecraft.world.gen.YOffset;
 import net.minecraft.world.gen.decorator.Decorator;
 import net.minecraft.world.gen.decorator.RangeDecoratorConfig;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.heightprovider.UniformHeightProvider;
 
 public class ChocobaconRegistry {
   public static final String MODID = "chocobacon";
-
-  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier(MODID, "chocobacon_group")).icon(() -> new ItemStack(ChocobaconRegistry.CHOCOLATE_BACON)).build();
 
   public static final ArmorMaterial chocolateBarMaterial = new ChocolateBarMaterial();
   public static Item COOKED_BACON, CHOCOLATE_BAR, CHOCOLATE_BACON, CHOCOLATE_HELMET, CHOCOLATE_CHESTPLATE, CHOCOLATE_LEGGINGS, CHOCOLATE_BOOTS, CHOCOLATE_BUCKET;
   public static Block CHOCOLATE_ORE, BACON_ORE;
   public static FlowableFluid STILL_CHOCOLATE, FLOWING_CHOCOLATE;
+
+  public static final ItemGroup CHOCOBACON_GROUP = FabricItemGroupBuilder.create(new Identifier(MODID, "chocobacon_group")).icon(() -> new ItemStack(CHOCOLATE_BACON)).build();
 
   public static void register() {
     COOKED_BACON = Registry.register(Registry.ITEM, new Identifier(MODID, "cooked_bacon"), new Item(new FabricItemSettings().group(CHOCOBACON_GROUP).food(new FoodComponent.Builder().hunger(8).saturationModifier(0.85F).meat().build())));
@@ -49,14 +51,14 @@ public class ChocobaconRegistry {
     Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_ore"), new BlockItem(CHOCOLATE_ORE, new FabricItemSettings().group(CHOCOBACON_GROUP)));
     Registry.register(Registry.ITEM, new Identifier(MODID, "bacon_ore"), new BlockItem(BACON_ORE, new FabricItemSettings().group(CHOCOBACON_GROUP)));
 
-    RegistryKey<ConfiguredFeature<?, ?>> chocolateOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+    RegistryKey<ConfiguredFeature<?, ?>> chocolateOreOverworld = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(MODID, "chocolate_ore_overworld"));
-    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, chocolateOreOverworld.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CHOCOLATE_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7));
+    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, chocolateOreOverworld.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_OVERWORLD, CHOCOLATE_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64)))))).spreadHorizontally().repeat(7);
     BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, chocolateOreOverworld);
 
-    RegistryKey<ConfiguredFeature<?, ?>> baconOreNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_WORLDGEN,
+    RegistryKey<ConfiguredFeature<?, ?>> baconOreNether = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY,
             new Identifier(MODID, "bacon_ore_nether"));
-    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, baconOreNether.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_NETHER, BACON_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(0, 0, 64))).spreadHorizontally().repeat(7));
+    Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, baconOreNether.getValue(), Feature.ORE.configure(new OreFeatureConfig(OreFeatureConfig.Rules.BASE_STONE_NETHER, BACON_ORE.getDefaultState(), 7)).decorate(Decorator.RANGE.configure(new RangeDecoratorConfig(UniformHeightProvider.create(YOffset.fixed(0), YOffset.fixed(64)))))).spreadHorizontally().repeat(7);
     BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Feature.UNDERGROUND_ORES, baconOreNether);
 
     CHOCOLATE_HELMET = Registry.register(Registry.ITEM, new Identifier(MODID, "chocolate_helmet"), new ArmorItem(chocolateBarMaterial, EquipmentSlot.HEAD, new FabricItemSettings().group(CHOCOBACON_GROUP)));

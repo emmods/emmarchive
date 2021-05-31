@@ -11,6 +11,8 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.item.Item;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.WorldAccess;
 
 import static coffee.waffle.chocobacon.Chocobacon.CHOCOLATE_FLUID;
 import static coffee.waffle.chocobacon.ChocobaconRegistry.*;
@@ -33,7 +35,7 @@ public abstract class ChocolateFluid extends Fluids {
 
   @Override
   protected BlockState toBlockState(FluidState fluidState) {
-    return CHOCOLATE_FLUID.getDefaultState().with(Properties.LEVEL_15, method_15741(fluidState));
+    return CHOCOLATE_FLUID.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(fluidState));
   }
 
   public static class Flowing extends ChocolateFluid {
@@ -41,6 +43,11 @@ public abstract class ChocolateFluid extends Fluids {
     protected void appendProperties(StateManager.Builder<Fluid, FluidState> builder) {
       super.appendProperties(builder);
       builder.add(LEVEL);
+    }
+
+    @Override
+    protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
+      // Do nothing
     }
 
     @Override
@@ -55,6 +62,11 @@ public abstract class ChocolateFluid extends Fluids {
   }
 
   public static class Still extends ChocolateFluid {
+    @Override
+    protected void beforeBreakingBlock(WorldAccess world, BlockPos pos, BlockState state) {
+      // Do nothing
+    }
+
     @Override
     public int getLevel(FluidState fluidState) {
       return 8;

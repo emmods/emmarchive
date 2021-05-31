@@ -5,8 +5,8 @@ jobs:
   build:
     strategy:
       matrix:
-        java: [ 8.0, 16 ]
-        os: [ ubuntu-20.04, macos-latest, windows-latest ]
+        java: [ 16 ]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: 1 - Checkout repository
@@ -18,13 +18,10 @@ jobs:
         with:
           distribution: adopt
           java-version: ${{ matrix.java }}
-      - name: 4 - Make Gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
-        run: chmod +x ./gradlew
-      - name: 5 - Build
+      - name: 4 - Build
         run: ./gradlew build
-      - name: 6 - Capture & upload build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '11' }}
+      - name: 5 - Capture & upload build artifacts
+        if: ${{ runner.os == 'Linux' }}
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts

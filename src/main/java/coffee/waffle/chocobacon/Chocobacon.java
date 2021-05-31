@@ -6,13 +6,10 @@
 package coffee.waffle.chocobacon;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import org.apache.logging.log4j.LogManager;
@@ -23,7 +20,6 @@ import static coffee.waffle.chocobacon.ChocobaconRegistry.STILL_CHOCOLATE;
 public class Chocobacon implements ModInitializer {
   public static final String MODID = "chocobacon";
   public static final Logger LOGGER = LogManager.getLogger(MODID);
-
 
   public static Block CHOCOLATE_FLUID;
 
