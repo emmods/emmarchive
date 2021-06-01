@@ -1,23 +1,12 @@
-# Automatically build the project and run any configured tests for every push
-# and submitted pull request. This can help catch issues that only occur on
-# certain platforms or Java versions, and provides a first line of defence
-# against bad commits.
-
-name: build
+name: Build Pride Flags
 on: [ pull_request, push ]
 
 jobs:
   build:
     strategy:
       matrix:
-        # Use these Java versions
-        java: [
-            8.0,  # Minimum supported by Minecraft
-            11,   # Current Java LTS
-            16    # Latest version
-        ]
-        # and run on both Linux and Windows
-        os: [ ubuntu-20.04, windows-latest ]
+        java: [ 16 ]
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
     runs-on: ${{ matrix.os }}
     steps:
       - name: 1 - Checkout repository
@@ -29,13 +18,10 @@ jobs:
         with:
           distribution: adopt
           java-version: ${{ matrix.java }}
-      - name: 4 - Make Gradle wrapper executable
-        if: ${{ runner.os != 'Windows' }}
-        run: chmod +x ./gradlew
-      - name: 5 - Build
+      - name: 4 - Build
         run: ./gradlew build
-      - name: 6 - Capture & upload build artifacts
-        if: ${{ runner.os == 'Linux' && matrix.java == '11' }} # Only upload artifacts built from LTS java on one OS
+      - name: 5 - Capture & upload build artifacts
+        if: ${{ runner.os == 'Linux' }}
         uses: actions/upload-artifact@v2
         with:
           name: Artifacts
