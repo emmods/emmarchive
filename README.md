@@ -23,17 +23,18 @@
   - Crafted via TODO
 
 Each road material has several variants:
-  - Plain
-    - Crafted via Construction Aggregate, Cement, and the road material
-  - Dotted White Painted
-  - Dotted Yellow Painted
-  - Solid White Painted
-  - Solid Yellow Painted
-  - One-Side Dotted White Painted
-  - One-Side Dotted Yellow Painted
-  - One-Side Solid White Painted
-  - One-Side Solid Yellow Painted
-TODO: The additional variants can be crafted via one plain road of a material and yellow or white paint
+
+- Plain
+  - Crafted via Construction Aggregate, Cement, and the road material
+- Dotted White Painted
+- Dotted Yellow Painted
+- Solid White Painted
+- Solid Yellow Painted
+- One-Side Dotted White Painted
+- One-Side Dotted Yellow Painted
+- One-Side Solid White Painted
+- One-Side Solid Yellow Painted TODO: The additional variants can be crafted via one plain road of a material and yellow
+  or white paint
 
 # License
 

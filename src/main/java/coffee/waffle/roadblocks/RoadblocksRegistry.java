@@ -10,9 +10,11 @@ package coffee.waffle.roadblocks;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
 import net.minecraft.block.Material;
-import net.minecraft.item.*;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -21,7 +23,7 @@ public class RoadblocksRegistry {
 
   public static ItemGroup ROADBLOCKS_GROUP;
   public static Item CONSTRUCTION_AGGREGATE, CEMENT, ASPHALT, ASPHALT_CONCRETE, WHITE_PAINT, YELLOW_PAINT;
-  public static Block PLAIN_ASPHALT_ROAD, DOTTED_WHITE_PAINTED_ASPHALT_ROAD, DOTTED_YELLOW_PAINTED_ASPHALT_ROAD, SOLID_WHITE_PAINTED_ASPHALT_ROAD, SOLID_YELLOW_PAINTED_ASPHALT_ROAD, ONE_SIDE_SOLID_WHITE_PAINTED_ASPHALT_ROAD, ONE_SIDE_SOLID_YELLOW_PAINTED_ASPHALT_ROAD, ONE_SIDE_DOTTED_WHITE_PAINTED_ASPHALT_ROAD, ONE_SIDE_DOTTED_YELLOW_PAINTED_ASPHALT_ROAD;
+  public static BottomSlabBlock PLAIN_ASPHALT_ROAD, DOTTED_WHITE_PAINTED_ASPHALT_ROAD, DOTTED_YELLOW_PAINTED_ASPHALT_ROAD, SOLID_WHITE_PAINTED_ASPHALT_ROAD, SOLID_YELLOW_PAINTED_ASPHALT_ROAD, ONE_SIDE_SOLID_WHITE_PAINTED_ASPHALT_ROAD, ONE_SIDE_SOLID_YELLOW_PAINTED_ASPHALT_ROAD, ONE_SIDE_DOTTED_WHITE_PAINTED_ASPHALT_ROAD, ONE_SIDE_DOTTED_YELLOW_PAINTED_ASPHALT_ROAD;
 
   public static void register() {
     ROADBLOCKS_GROUP = FabricItemGroupBuilder.create(new Identifier(MODID, MODID + "group")).icon(() -> new ItemStack(ASPHALT)).build();
@@ -33,15 +35,15 @@ public class RoadblocksRegistry {
     WHITE_PAINT = Registry.register(Registry.ITEM, new Identifier(MODID, "white_paint"), new Item(new FabricItemSettings().group(ROADBLOCKS_GROUP)));
     YELLOW_PAINT = Registry.register(Registry.ITEM, new Identifier(MODID, "yellow_paint"), new Item(new FabricItemSettings().group(ROADBLOCKS_GROUP)));
 
-    PLAIN_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "plain_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    DOTTED_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "dotted_white_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    DOTTED_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "dotted_yellow_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    SOLID_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "solid_white_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    SOLID_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "solid_yellow_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    ONE_SIDE_SOLID_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_solid_white_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    ONE_SIDE_SOLID_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_solid_yellow_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    ONE_SIDE_DOTTED_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_dotted_white_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
-    ONE_SIDE_DOTTED_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_dotted_yellow_painted_asphalt_road"), new Block(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    PLAIN_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "plain_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    DOTTED_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "dotted_white_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    DOTTED_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "dotted_yellow_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    SOLID_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "solid_white_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    SOLID_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "solid_yellow_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    ONE_SIDE_SOLID_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_solid_white_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    ONE_SIDE_SOLID_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_solid_yellow_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    ONE_SIDE_DOTTED_WHITE_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_dotted_white_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
+    ONE_SIDE_DOTTED_YELLOW_PAINTED_ASPHALT_ROAD = Registry.register(Registry.BLOCK, new Identifier(MODID, "one_side_dotted_yellow_painted_asphalt_road"), new BottomSlabBlock(FabricBlockSettings.of(Material.STONE).requiresTool().strength(3.0F, 3.0F)));
     // TODO: add corners; other road materials; sealcoat; accessories to the road
 
     Registry.register(Registry.ITEM, new Identifier(MODID, "plain_asphalt_road"), new BlockItem(PLAIN_ASPHALT_ROAD, new FabricItemSettings().group(ROADBLOCKS_GROUP)));

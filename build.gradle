@@ -1,26 +1,17 @@
-plugins { id "fabric-loom" version "0.7-SNAPSHOT" }
+plugins { id "fabric-loom" version "0.8-SNAPSHOT" }
 
-sourceCompatibility = JavaVersion.VERSION_1_8
-targetCompatibility = JavaVersion.VERSION_1_8
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
 
 archivesBaseName = project.archives_base_name
 version = project.mod_version
 group = project.maven_group
-
-repositories {
-  maven { url 'https://jitpack.io' }
-}
 
 dependencies {
   minecraft "com.mojang:minecraft:${project.minecraft_version}"
   mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
   modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
   modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-  implementation 'com.github.caffeinemc:sodium-fabric:mc1.16.3-0.1.0'
-  implementation 'com.github.caffeinemc:lithium-fabric:1.16.x-0.4.5'
-  implementation 'com.github.spottedleaf:starlight:1.0.0-RC2'
-  implementation 'com.github.astei:lazydfu:0.1.2'
 }
 
 processResources {

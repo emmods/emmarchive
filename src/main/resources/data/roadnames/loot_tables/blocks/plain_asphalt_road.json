@@ -1,12 +1,12 @@
 {
-  "type": "minecraft:block/slab_bottom",
+  "type": "minecraft:block",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "roadblocks:plain_road"
+          "name": "roadblocks:plain_asphalt_road"
         }
       ]
     }
