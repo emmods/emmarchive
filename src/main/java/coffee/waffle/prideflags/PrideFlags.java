@@ -7,16 +7,14 @@ package coffee.waffle.prideflags;
 
 import net.fabricmc.api.ModInitializer;
 import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 public class PrideFlags implements ModInitializer {
   public static final String MODID = "prideflags";
-  public static final Logger LOGGER = LogManager.getLogger(MODID);
 
   @Override
   public void onInitialize() {
     PrideFlagsRegistry.register();
 
-    LOGGER.info("Pride Flags has finished loading! \uD83C\uDFF3️\u200D\uD83C\uDF08");
+    LogManager.getLogger(MODID).info("Pride Flags has finished loading! \uD83C\uDFF3\u200D\uD83C\uDF08");
   }
 }
