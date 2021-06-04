@@ -1,14 +1,14 @@
 {
-  "type": "crafting_shapeless",
+  "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "cyan_wool"
+      "item": "minecraft:cyan_wool"
     },
     {
-      "item": "blue_wool"
+      "item": "minecraft:blue_wool"
     },
     {
-      "item": "white_wool"
+      "item": "minecraft:white_wool"
     }
   ],
   "result": {
