@@ -1,37 +1,29 @@
 {
   "schemaVersion": 1,
-  "id": "flight_display",
+  "id": "esev",
   "version": "${version}",
-
-  "name": "Critical Flight Display",
-  "description": "Adds HUD for Elytra Flight",
+  "name": "Emma's Simple Elytra View",
+  "description": "Adds a speed & pitch indicator for elytra.",
   "authors": [
+    "Emmaffle",
     "TheCritic"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
     "sources": "https://fabricmc.net/"
   },
-
-  "license": "CC0-1.0",
-  "icon": "assets/modid/elytra.png",
-
-  "environment": "*",
+  "license": "MIT",
+  "icon": "assets/esev/elytra.png",
+  "environment": "client",
   "entrypoints": {
     "main": [
-      "net.critical.flight_display.FlightDisplay"
+      "coffee.waffle.esev.FlightDisplay"
     ]
   },
   "mixins": [
-      "flight_display.mixins.json"
+    "esev.mixins.json"
   ],
-
   "depends": {
-    "fabricloader": ">=0.7.2",
     "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "suggests": {
-    "flamingo": "*"
+    "minecraft": "1.17.x"
   }
 }
