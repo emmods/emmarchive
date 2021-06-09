@@ -58,7 +58,6 @@ public class ChocobaconClient implements ClientModInitializer {
       }
     });
 
-    // The FluidRenderer gets the sprites and color from a FluidRenderHandler during rendering
     final FluidRenderHandler renderHandler = new FluidRenderHandler() {
       @Override
       public Sprite[] getFluidSprites(BlockRenderView view, BlockPos pos, FluidState state) {
