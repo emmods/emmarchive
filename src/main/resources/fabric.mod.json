@@ -12,7 +12,7 @@
     "sources": "https://github.com/wafflecoffee/roadblocks",
     "issues": "https://github.com/wafflecoffee/roadblocks/issues"
   },
-  "license": "MPL-2.0-no-copyleft-exception",
+  "license": "Unlicense",
   "icon": "assets/roadblocks/icon.png",
   "environment": "*",
   "entrypoints": {
