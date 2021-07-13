@@ -1,0 +1,12 @@
+{
+  "item.fabulouschurros.plain_churro": "Plain Churro",
+  "item.fabulouschurros.spicy_churro": "Spicy Churro",
+  "item.fabulouschurros.jumping_churro": "Jumping Churro",
+  "item.fabulouschurros.churro_helmet": "Churro Helmet",
+  "item.fabulouschurros.churro_chestplate": "Churro Chestplate",
+  "item.fabulouschurros.churro_leggings": "Churro Leggings",
+  "item.fabulouschurros.churro_boots": "Churro Boots",
+  "advancements.fabulouschurros.churro_obtained": "Churro obtained!",
+  "advancements.fabulouschurros.churro_obtained.desc": "Hope you don't get too fat trying to eat it...",
+  "itemGroup.fabulouschurros.churro_group": "Fabulous Churros"
+}

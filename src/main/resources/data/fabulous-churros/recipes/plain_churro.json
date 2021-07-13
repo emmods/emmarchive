@@ -1,0 +1,15 @@
+{
+  "type": "crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "sugar"
+    },
+    {
+      "item": "wheat"
+    }
+  ],
+  "result": {
+    "item": "fabulouschurros:plain_churro",
+    "count": 1
+  }
+}

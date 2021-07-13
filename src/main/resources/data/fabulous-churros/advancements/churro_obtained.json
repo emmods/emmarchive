@@ -1,0 +1,32 @@
+{
+  "display": {
+    "icon": {
+      "item": "fabulouschurros:plain_churro"
+    },
+    "title": {
+      "translate": "advancements.fabulouschurros.churro_obtained"
+    },
+    "description": {
+      "translate": "advancements.fabulouschurros.churro_obtained.desc"
+    },
+    "show_toast": true,
+    "announce_to_chat": true
+  },
+  "criteria": {
+    "churro_obtained": {
+      "trigger": "inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "fabulouschurros:plain_churro"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "churro_obtained"
+    ]
+  ]
+}

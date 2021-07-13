@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "fabulous-churros",
+  "version": "${version}",
+  "name": "Fabulous Churros",
+  "description": "Adds churros, which are simply fabulous.",
+  "authors": [
+    "Emmaffle"
+  ],
+  "contact": {
+    "homepage": "https://modrinth.com/mod/fabulous-churros",
+    "sources": "https://github.com/wafflecoffee/fabulous-churros",
+    "issues": "https://github.com/wafflecoffee/fabulous-churros/issues"
+  },
+  "license": "WTFWYEDTHSPL",
+  "icon": "assets/fabulous-churros/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "coffee.waffle.fabulouschurros.FabulousChurros"
+    ]
+  },
+  "depends": {
+    "fabric-api-base": "*",
+    "fabric-biome-api-v1": "*",
+    "fabric-item-groups-v0": "*",
+    "fabric-item-api-v1": "*",
+    "fabric-object-builder-api-v1": "*"
+  }
+}
