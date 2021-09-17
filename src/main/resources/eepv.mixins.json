@@ -3,7 +3,7 @@
   "package": "coffee.waffle.eepv.mixin",
   "compatibilityLevel": "JAVA_16",
   "client": [
-    "GameInfoMixin"
+    "InGameHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1
