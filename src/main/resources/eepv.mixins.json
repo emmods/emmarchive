@@ -1,9 +1,7 @@
 {
   "required": true,
-  "package": "coffee.waffle.esev.mixin",
+  "package": "coffee.waffle.eepv.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [
-  ],
   "client": [
     "GameInfoMixin"
   ],
